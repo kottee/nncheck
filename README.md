@@ -1,1 +1,2 @@
-# nncheck
+# plugin-payment-novalnet
+NOVALNET PAYMENT PLUGIN FOR PLENTYMARKETS
