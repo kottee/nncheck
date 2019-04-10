@@ -846,8 +846,8 @@ class PaymentService
 	 * @return bool
 	 */
 	public function allowedCountries($allowed_country) {
-		return true;
-		/*
+		//return true;
+		
 		$allowed_country = str_replace(' ', '', $allowed_country);
 		$allowed_country_array = explode(',', $allowed_country);	
 		$basket = $this->basketRepository->load();	
@@ -858,7 +858,7 @@ class PaymentService
 			return true;
 		}  
 			return false;
-			*/
+			
 	}
 	
 	
