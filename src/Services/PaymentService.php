@@ -850,15 +850,15 @@ class PaymentService
 		
 		$allowed_country = str_replace(' ', '', $allowed_country);
 		$allowed_country_array = explode(',', $allowed_country);
-		$country = '';
-		if(!empty($this->basketRepository)){
+		//$country = '';
+		//if(!empty($this->basketRepository)){
 			$basket = $this->basketRepository->load();	
-			if($basket->customerInvoiceAddressId) {
+		//	if($basket->customerInvoiceAddressId) {
 				$billingAddressId = $basket->customerInvoiceAddressId;
 				$address = $this->addressRepository->findAddressById($billingAddressId);
 				$country = $this->countryRepository->findIsoCode($address->countryId, 'iso_code_2');	
-			}
-		}
+		//	}
+		//}
 		if (in_array ($country, $allowed_country_array)) {
 			return true;
 		}  
